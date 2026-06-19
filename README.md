@@ -1,4 +1,4 @@
-// image::./sources/5.2.0/images/figure-s100-logo.svg[S100_logo,248,120]
+image::./sources/5.2.0/images/figure-s100-logo.svg[S100_logo,248,120]
 
 = IHO S-100 Universal Hydrographic Data Model
 
@@ -13,9 +13,9 @@ This document is available in its rendered forms here:
 This is the IHO repository for developing the next edition of
 the S-100 Universal Hydrographic Data Model.
 
-WARNING: The contents of this repository are in draft form and are not necessarily in force yet.
+*WARNING: The contents of this repository are in draft form and are not necessarily in force yet.
 Please refer to the final version published on the official
-https://iho.int[IHO] website.
+https://iho.int[IHO] website.*
 
 
 == General
@@ -29,8 +29,6 @@ This repository contains the source files of S-100 standard, including:
 ** Part 2a Concept and Data Dictionary Registers
 ** Part 2b Portrayal Register Model
 ** Part 3 General Feature Model and Rules for Application Schema
-** Part 4a Metadata
-** Part 4b Metadata for Imagery and Gridded Data
 
 
 These documents are encoded in the
