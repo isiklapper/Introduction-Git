@@ -1,9 +1,83 @@
-# Introduction-Git
-master this in two week?
-I can do it
-**$$olala
+= IHO S-100 Universal Hydrographic Data Model
 
-$$****readable text readme as md file
+image:https://github.com/metanorma/iho-s-100/actions/workflows/generate.yml/badge.svg["Build Status", link="https://github.com/metanorma/iho-s-100/actions/workflows/generate.yml"]
+
+This document is available in its rendered forms here:
+
+* https://metanorma.github.io/iho-s-100/[IHO S-100 (HTML)]
+
+== Purpose
+
+This is the IHO repository for developing the next edition of
+the S-100 Universal Hydrographic Data Model.
+
+WARNING: The contents of this repository are in draft form and are not necessarily in force yet.
+Please refer to the final version published on the official
+https://iho.int[IHO] website.
 
 
-This is a change by suhyun.2
+== General
+
+This repository contains the source files of S-100 standard, including:
+
+* S-100 Ed 5.2.0 - Universal Hydrographic Data Model
+** Part 0 Overview
+** Part 1 Conceptual Schema Language
+** Part 2 Management of Registers
+** Part 2a Concept and Data Dictionary Registers
+** Part 2b Portrayal Register Model
+** Part 3 General Feature Model and Rules for Application Schema
+** Part 4a Metadata
+** Part 4b Metadata for Imagery and Gridded Data
+
+
+These documents are encoded in the
+https://www.metanorma.org/author/topics/document-format/[Metanorma AsciiDoc format].
+
+
+== Structure
+
+`sources/`::
+source of the S-100 documents and models
+
+`_site/`::
+(automatically generated, in the `gh-pages` branch) published document.
+
+
+== Usage
+
+This repository uses `metanorma` to run these processes.
+
+Please refer to
+https://www.metanorma.org/author/iho/authoring-guide/[Metanorma-IHO documentation]
+for authoring guidance.
+
+
+== Installing build tools
+
+See the https://www.metanorma.org/install/[Metanorma install] page.
+
+
+== Building the document
+
+If you have installed the build tools locally, and wish to run the
+locally-installed compilation tools, there is nothing further to set.
+
+If you use a locally installed Metanorma, run:
+
+[source,sh]
+----
+metanorma site generate
+----
+
+If you wish to avoid using local dependencies, use the docker
+version by:
+
+[source,sh]
+----
+docker run -v "$(pwd)":/metanorma -w /metanorma -it metanorma/mn metanorma site generate
+----
+
+== License
+
+See link:LICENSE.adoc[LICENSE].
