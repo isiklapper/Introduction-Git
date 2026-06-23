@@ -1,251 +1,76 @@
-= Guidance for Hydrographic Offices
-:doctype: book
-:toc: left
-:toclevels: 2
-:sectnums:
-:edition: 2.0.0
-:publication-date: 2017-01
-:organization: International Hydrographic Organization (IHO)
-:status: in-force
-:serial-number: C-17
+// image::./sources/2.0.0/images/figure-s99-logo.svg[S99_logo,248,120]
 
-[colophon]
-== Document Metadata
-* **Serial:** {serial-number} (Edition {edition})
-* **Date:** {publication-date}
-* **Status:** {status}
-* **Language:** en (Script: Latn)
-* **Standard:** IHO IRCC MSDIWG
+= IHO S-99 Operational Procedures for the Organization and Management of the S-100 GI Registry
 
----
+image:https://github.com/metanorma/iho-s-99/actions/workflows/generate.yml/badge.svg["Build Status", link="https://github.com/metanorma/iho-s-99/actions/workflows/generate.yml"]
 
-© Copyright International Hydrographic Organization 2017
+This document is available in its rendered forms here:
 
-This work is copyright. Apart from any use permitted in accordance with the Berne Convention for the Protection of Literary and Artistic Works (1886), and except in the circumstances described below, no part may be translated, reproduced by any process, adapted, communicated or commercially exploited without prior written permission from the International Hydrographic Organization (IHO). Copyright in some of the material in this publication may be owned by another party and permission for the translation and/or reproduction of that material must be obtained from the owner.
+* https://metanorma.github.io/iho-s-99/[IHO S-99 (HTML)]
 
-This document or partial material from this document may be translated, reproduced or distributed for general information, on no more than a cost recovery basis. Copies may not be sold or distributed for profit or gain without prior written agreement of the IHO Secretariat and any other copyright holders.
+== Purpose
 
-In the event that this document or partial material from this document is reproduced, translated or distributed under the terms described above, the following statements are to be included:
+This is the IHO repository for developing the next edition of
+the S-99 Operational Procedures for the Organization and Management of the S-100 GI Registry.
 
-[quote]
-____
-“Material from IHO publication [reference to extract: Title, Edition] is reproduced with the permission of the IHO Secretariat (Permission No ……./…) acting for the International Hydrographic Organization (IHO), which does not accept responsibility for the correctness of the material as reproduced: in case of doubt, the IHO’s authentic text shall prevail. The incorporation of material sourced from IHO shall not be construed as constituting an endorsement by IHO of this product.”
-____
+WARNING: The contents of this repository are in draft form and are not necessarily in force yet.
+Please refer to the final version published on the official
+https://iho.int[IHO] website.
 
-[quote]
-____
-“This [document/publication] is a translation of IHO [document/publication] [name]. The IHO has not checked this translation and therefore takes no responsibility for its accuracy. In case of doubt the source version of [name] in [language] should be consulted.”
-____
 
-The IHO Logo or other identifiers shall not be used in any derived product without prior written permission from the IHO Secretariat.
+== General
 
-[.address]
-****
-**Published by the** +
-International Hydrographic Organization +
-4b quai Antoine 1er +
-Principauté de Monaco +
-Tel: (377) 93.10.81.00 +
-Fax: (377) 93.10.81.40 +
-Email: info@iho.int +
-Web: www.iho.int
-****
+This repository contains the source files of S-99 operational procedures, including:
 
----
+* S-99 Ed 2.0.0 - Operational Procedures for the Organization and Management of the S-100 GI Registry
 
-== Foreword
+These documents are encoded in the
+https://www.metanorma.org/author/topics/document-format/[Metanorma AsciiDoc format].
 
-The 17th International Hydrographic Conference held in May 2007, directed that CHRIS (now the IHO Hydrographic Services and Standards Committee — HSSC) establish a Marine Spatial Data Infrastructures Working Group (MSDIWG) to identify the Hydrographic Community inputs to National Spatial Data Infrastructures (NSDI). In 2015, the responsibility for the MSDIWG moved from HSSC to the Inter-Regional Coordination Committee (IRCC). This change reflected the ongoing nature of the work of the MSDIWG in tackling predominantly non-technical matters. The Terms of Reference of and other information about the MSDIWG are available at:
 
-www.iho.int -> Committees & WG -> MSDIWG
+== Structure
 
-IHO publication M-2 outlines the benefits and options for the development of a national hydrographic policy that ensures a State has a knowledge of the physical features of the seabed and coast, as well as the currents, tides and certain physical properties of the sea water, such that the needs of safety of navigation and protection of the marine environment can be met. A successful national hydrographic policy will not only meet the requirements of the mariner but can provide additional and often greater benefits to the State.
+`sources/`::
+source of the S-99 documents and models
 
-Having such hydrographic policies in place led to the adoption of IHO Resolution 5/2009, on MSDI policy, by the 4th Extraordinary International Hydrographic Conference in Monaco in June 2009. It stated inter alia that:
+`_site/`::
+(automatically generated, in the `gh-pages` branch) published document.
 
-[quote]
-____
-The IHO will support Member States in the identification, development and implementation of an appropriate role in national Spatial Data Infrastructure (SDI) and MSDI initiatives. This will be achieved through the development and maintenance of a Special Publication that will provide a definitive procedural guide to establishing the role of the national hydrographic authority in MSDI.
-____
 
-Accordingly, a procedural guide to establishing the role of the national hydrographic authority in MSDI was developed by the MSDIWG, under the title *Spatial Data Infrastructures: “The Marine Dimension” — Guidance for Hydrographic Offices*. This document was endorsed by the HSSC at its 1st meeting (Singapore, October 2009), and subsequently approved by IHO Member States as edition 1.0 of a new publication C-17. This document was subsequently updated in 2011, incorporating minor changes, as version 1.1.0.
+== Usage
 
-Due to the ongoing dynamic developments in MSDI the MSDIWG made selected and important changes. This version was subsequently adopted by the IHO Member States as version 2.0.0.
+This repository uses `metanorma` to run these processes.
 
-== Introduction
+Please refer to
+https://www.metanorma.org/author/iho/authoring-guide/[Metanorma-IHO documentation]
+for authoring guidance.
 
-The purpose of this document is to explain the way that a Hydrographic Office (HO) should promote, support, and participate in Spatial Data Infrastructures (SDIs). It is not definitive in its nature, preferring instead to provide guidance on how best to achieve this through practical advice, simple step by step processes, useful links to reference material and examples of best practice.
 
-We now have a growing body of knowledge and information available to the HO community that provides guidelines rather than advice to enable us to better understand and appreciate the value and benefit of SDI. Rather than repeat this general information at length, the relevant literature reviews are provided at the end of this document.
+== Installing build tools
 
-The reader is encouraged to consult these references at an early stage of any SDI development so that the HO can make the right choices regarding whether it wishes to take a leading role in SDI development or seeks to support an existing SDI initiative or work with others to develop an SDI. In all cases, however, the HO should be seen as the competent authority concerning the provision of hydrographic and related data under any national and/or regional Marine Spatial Data Infrastructure (MSDI).
+See the https://www.metanorma.org/install/[Metanorma install] page.
 
-There are many advantages and benefits to sharing hydrographic data and services at either a national or regional level. An HO may therefore choose to participate in a wider SDI effort, and/or to develop its own SDI at an “enterprise” level. This document provides a useful template to developing an enterprise SDI capability.
 
-== What is a Spatial Data Infrastructure (SDI)?
+== Building the document
 
-Spatial Data is the data or information that identifies the geographic location of features and boundaries on Earth and Space, such as natural or constructed features, oceans and space but also includes encoding attributes, observations and other metrics concerning these features and boundaries.
+If you have installed the build tools locally, and wish to run the
+locally-installed compilation tools, there is nothing further to set.
 
-Spatial data is usually stored as coordinates and topology, and is data that can be mapped. Spatial data is often accessed, manipulated or analyzed through Geographic Information Systems (GIS).
+If you use a locally installed Metanorma, run:
 
-=== Global Spatial Data Infrastructure (GSDI) Cookbook
-SDI is *“the relevant base collection of technologies, policies and institutional arrangements that facilitate the availability of and access to spatial data”*.
+[source,sh]
+----
+metanorma site generate
+----
 
-It embraces:
+If you wish to avoid using local dependencies, use the docker
+version by:
 
-* The processes that integrate technologies, policies, standards, organizations and people.
-* The structure of working practices and relationships across data producers and users for access, sharing and analyzing geospatial information across government and commerce.
-* The hardware, software and system components necessary to support the processes.
+[source,sh]
+----
+docker run -v "$(pwd)":/metanorma -w /metanorma -it metanorma/mn metanorma site generate
+----
 
-A Marine Spatial Data Infrastructure (MSDI) is that element of an SDI that focuses on the marine input in terms of governance, standards, ICT and content. The concept of MSDI is now gaining wider appreciation in terms of the way a variety of data types might be combined for efficient analysis by a wide range of disciplines, such as spatial planning, environmental management and emergency response. 
+== License
 
-This requires the data to be held in a generic way, rather than for a particular product for a limited user group or for a specific purpose. An MSDI is not a collection of hydrographic products, but an infrastructure that promotes interoperability of data at all levels.
-
-This document focuses on the importance of MSDI to IHO MS and provides guidance towards engaging in MSDI and provides evidence of data management best practice and use cases for consideration.
-
-== What constitutes an MSDI?
-
-An MSDI can be described as a framework comprising key distinct pillars.
-
-=== Policy and Governance
-A policy should exist defining the need to create information that is interoperable. This policy is often linked to a regional, national or organizational strategy for sharing and exchanging geographic information (e.g., INSPIRE in the EU, and LINZ in New Zealand). 
-
-=== People & Organizations
-Functional MSDI requires willingness and practical co-operation between the various organizations that create, share and use information to implement the overall policy. There should also be a clearly defined governance structure and transparency in decision-making and reporting to foster a shared sense of working towards a common goal.
-
-=== Enablers
-The enablers in MSDI are the essential building blocks that provide the framework for data acquisition, management, updating and dissemination:
-
-* **Standards:** International Standards for geographic information exist or are being developed and, in many areas, sector-based standards are being put in place that depend on these over-arching standards. For example, IHO S-57 and also S-100 rely in turn on the ISO 19100 series of geographic standards. The standards work of the Open Geospatial Consortium (OGC) especially in the areas of data content modelling, data transport, and web services are critical to developing a robust SDI approach.
-* **Technology:** The provision of technical infrastructure (both hardware and software) will enable the delivery of data and services to allow the viewing, sharing, transformation and downloading of data to complement informational products. As the technical infrastructure matures, development can enable the SDI not only to work in different geodetic systems but also enable the user to transform data to create informational products (such as maps) in different projections.
-+
-[NOTE]
-====
-One of the key objectives of any SDI is enabling data sharing among SDI participants; this does not necessarily mean “free and unlimited access”, but controlled and regulated by the SDI authorities and contributors.
-====
-* **Metadata:** At its simplest, metadata is “data about data” and describes the characteristics of a dataset (i.e., content, value and limitations) and is normally held in a metadata management system or clearinghouse to provide mechanisms of search and retrieval. It is a vital component in “discovering” data and information and understanding how the data can be used. The most common way to search for data through its metadata in a quick and easy manner is using a web portal.
-* **IHO S-100 Universal Hydrographic Data Model:** S-100 provides the data framework for the development of not only the next generation of ENC products, but also other related digital datasets and products required by the hydrographic, maritime and GIS communities. Specifications based on S-100 are now being developed for a range of thematic data resources such as S-102 for bathymetry and S-122 for Marine Protected Areas (MPA).
-
-=== Content
-Arguably, the most important component of SDI is the information content which is available to users. Without content, expressed within a consistent coordinate reference system, SDI is of minimal use. At the core of this information is reference information (i.e., the common datasets, themes or spatial data layers that “most people use most of the time” and which collectively make up a digital base “map” that can be viewed and queried).
-
-Reference information may be defined as any geographic feature that is used as a location reference for application information, or can be used in geographic analysis. It is sometimes arbitrarily divided into base and associated thematic reference information with base information comprising fundamental topographic features (e.g., buildings, roads and elevation) describing complete and detailed coverage of the Earth’s surface. Associated reference information comprises supplementary datasets where this is also commonly used to support geo-referencing or analysis (e.g., transport networks, land cover).
-
-Application information provides the outer layer of information which is generally “application” or “business” specific. It may contain no spatial reference(s) other than provided by the reference information and consist only as supplementary properties.
-
-=== Education and Learning
-SDI cannot be successfully delivered without the four key pillars above. However, a fifth key element which underpins the four pillars—education and learning—is very important but often overlooked. In the HO community, involvement in MSDI take-up and adoption has been slow. A lack of understanding of SDI has been responsible, in part, for MSDI input lagging behind its terrestrial counterparts with MSDI, as part of existing SDI not considered a priority or considered unnecessary.
-
-== The Current Landscape
-
-Since C-17 was first published in 2009, the landscape in which HOs operate has rapidly changed due to, for example, the need for greater access and sharing of public data; open data initiatives; the development of new and potentially disruptive technologies and the advent of the power of “place” driven by the expectations of users viewing, analyzing and using spatial data.
-
-New data capture technologies such as satellite-derived bathymetry, crowd-sourced data and the use of Underwater Autonomous and Remotely Operated Vehicles (UAV and ROV) are now being actively employed as more cost-effective methods in sea regions and depths where either existing data is poor or non-existent and where conditions allow for the use of these technologies. Ship-borne survey may over time become the capture platform of last resort for some purposes. The emergence of e-Navigation, a concept developed by IMO, embraces the harmonized collection, integration, exchange, presentation and analysis of maritime information on board ship and ashore. It does this by electronic means to enhance berth-to-berth navigation and related services, for safety and security at sea and protection of the marine environment.
-
-Politicians are now taking a far greater interest in the world’s sea space in terms of its potential to generate economic and socio-economic benefits and to maximize this within national territorial sea limits. The recent spate of disasters at sea across the World have all heightened the urgency for better access and re-use of HO data for emergency response purposes.
-
-Geospatial data and information is no longer seen as “special” or “different” as the citizen, thanks to Google, Microsoft and other global technology companies providing mapping “mash-ups”, now use such information without even thinking about where it came from and any intrinsic value contained therein. We now have mobile devices capable of doing what a mainframe computer did 10 years ago for a fraction of the cost in a fraction of the time.
-
-The value of geospatial data has fallen by approximately 80% in the last 5 years. It is now considered to be a commodity resource. In turn, the advent of Open Data strategies by nations, allowing the re-use of data in a free and open manner, is itself stimulating the growth of applications developed by commercial companies.
-
-=== The Traditional Role of HOs
-All HOs depend on data, but mostly think and operate in terms of products. The creation of ENCs requires chart information to be decomposed into features and attributes, but the output is still a generalized product, albeit provided as data sets. The delivery of these data sets is also on a cell-by-cell basis, characterized by scale. They are therefore restricted in their use by design.
-
-Most HOs focus on supplying products to a narrow sector of navigational users. The driving force is navigational safety, with any additional use being an opportunistic spin-off. The opportunity to service a wider user community (outside of navigation) of approximately 5 million potential users has been overlooked in the past but now needs to be seriously considered. The imperative to engage with this much wider community of users has grown with the demand for access to marine and maritime geospatial data from commerce, government, academia and the citizen.
-
-=== From Data to Information to Knowledge
-The principle of data being the foundation of knowledge is well known. In essence, knowledge is only of value if conveyed, requiring a broad base of data to extract a smaller volume of knowledge. What is less often articulated is the amount of redundancy in many knowledge systems, where far more data is held than actually converted into conveyed knowledge. 
-
-The conversion of detailed bathymetric surveys into charts with sparse soundings is a good example of this. A large amount of data is collected, and although it presents a lot of information to the compiler, only a small amount of the knowledge is passed on to the recipient of the product. Thus, the knowledge transfer is only a small part of the potential of the original data. Many hydrographic data sets have the potential to convey a range of knowledge categories.
-
-Continuing with the bathymetric survey example, in addition to providing knowledge relevant to a navigational chart (where the knowledge conveyed is shoal-biased to ensure a suitable depth of water safety margin) the data could also be used for the following purposes:
-
-* **Full 3D seafloor modeling** for engineering purposes (e.g., underwater construction; pipeline/cable laying; dumping and dredging operations) for which shoal bias is inappropriate;
-* **Seafloor type definition** from backscatter data for sedimentary studies and engineering planning;
-* **Sound velocity data** for oceanographic studies;
-* **Wreck and obstruction data** in more detail than portrayed on charts (e.g., for historical studies, defense applications, recreational diving interest); and
-* **Geodetic and tidal information** for datum studies.
-
-In addition to the bathymetric survey case described, HOs have a wealth of other data including navigational marks, traffic schemes, boundaries and limits. The idea of exploiting as much of the data as possible for numerous applications makes practical sense in the modern world.
-
-Work remains to be done to derive benefit from HOs' maritime data heritage in order to satisfy the breadth of current and future customers’ needs. It seems difficult to determine non-SOLAS off-the-shelf products that would meet the various possible marine data requirements. Therefore, the future may lie in developing systems and workflows that would meet user requirements and from such systems derive fit-for-purpose products/maps without human assistance except at the user interface. The concept of marine ontologies may be the solution to achieve this.
-
-==== Understanding Ontologies
-Ontologies are a representation of knowledge in a particular subject domain (such as marine) that are written with a standardized and structured syntax. Ontologies can relate resources to other resources, either internally or in other ontologies. For example, an individual resource is associated with a class (“apple” is a member of “fruit”) or a class is associated with an ontology (class “fruit” is described in an ontology called “food”).
-
-A formal specification of a (controlled) vocabulary can be something we are all familiar with: a plain list of words, a dictionary, a taxonomy, a thesaurus, or it could be a more technical document such as an Object Model in Unified Modeling Language (UML) diagram, or an eXtensible Markup Language (XML) schema. Simply expressing a controlled vocabulary in a Web Ontology Language (OWL) file makes it qualify as an ontology.
-
-=== Data Duplication and Conflict
-An organization focused on the delivery of discrete products (such as paper charts, ENCs and nautical publications) may have separate data holdings that contribute to different product lines. This can result in the same data being held more than once (e.g., light information shown on charts being stored in a separate system to the light information in a List of Lights). This is not only inefficient in terms of the volume and use of data held, but can also lead to differences between the data held for the same feature. 
-
-This has become particularly evident where some ENCs and paper charts have discrepancies between each other and between scales. This puts into question the value of the knowledge portrayed, as the conflict demonstrates doubt and uncertainty in what is correct. Such fragmentation of data, together with proprietary or product-specific formats can limit interoperability. This is something that improved data management practices or developing an enterprise SDI within the HO could help to eliminate.
-
-== Why is MSDI important to a HO?
-
-Involvement in MSDI will elevate the importance of hydrography across a wider marine sector in-country and regionally as well as giving a wider user community exposure to the data and information that can be provided by the HO. It will also provide politicians with the information necessary for government per se, to gain a greater interest and understanding of the role of hydrography nationally.
-
-Hydrography has a vital role in MSDI in providing core “reference” data (such as bathymetry, maritime boundaries, coastline and geographic areas and names). After all, Hydrography is the branch of applied science which deals with the measurement and description of the physical features of oceans, seas, coastal areas, lakes and rivers, as well as with the prediction of their change over time. It does this firstly for the purpose of safety of navigation but also plays a crucial role in the support, through its data and information resources, of all other marine activities, including economic development, security and defense, scientific research, and environmental protection.
-
-== MSDI – Some Important Drivers
-
-=== Blue Economy and Blue Growth
-The concept of a “blue economy” came out of the 2012 Rio+20 Conference and emphasizes conservation and sustainable management, based on the premise that healthy ocean ecosystems are more productive and a must for sustainable ocean-based economies. To support a shift to this new approach, the UN Food and Agriculture Organization (FAO) launched the Blue Growth Initiative, through which it will assist countries in developing and implementing blue economy and growth agendas. 
-
-Concurrently, the European Union developed its long-term strategy to support sustainable growth in the marine and maritime sectors as a whole. Seas and oceans are drivers for the European economy and have great potential for innovation and growth. It is the maritime contribution to achieving the goals of the Europe 2020 strategy for smart, sustainable and inclusive growth.
-
-The ‘blue’ economy represents roughly 5.4 million jobs and generates a gross added value of almost €500 billion a year. The strategy consists of three core components:
-
-. **Develop sectors with potential for sustainable jobs and growth:**
-* Aquaculture and fisheries
-* Coastal tourism
-* Marine biotechnology
-* Ocean energy generation
-* Seabed mining
-. **Providing knowledge, legal certainty and security in the blue economy:**
-* Marine knowledge to improve access to information about the sea;
-* Maritime spatial planning to ensure an efficient and sustainable management of activities at sea;
-* Integrated maritime surveillance to give authorities a better picture of what is happening at sea.
-. **Sea basin strategies to ensure tailor-made measures and to foster cooperation between countries:**
-* Adriatic and Ionian Seas
-* Arctic Ocean
-* Atlantic Ocean
-* Baltic Sea
-* Black Sea
-* Mediterranean Sea
-* North Sea
-
-=== UN-GGIM
-The United Nations initiative on Global Geospatial Information Management (UN-GGIM) is now playing a leading role in setting the agenda for the development of global geospatial information and to promote its use to address key global challenges. It provides a forum to liaise and coordinate among Member States, and between Member States and international organizations.
-
-The IHO currently has observer status at UN-GGIM. In the marine space, the future role of the IHO and its Member States will be crucial to enabling the wider reach and use of HO data as part of the framework of work activities such as:
-
-* Development of the global geodetic reference frame;
-* Development of a global map for sustainable development;
-* Geospatial information supporting Sustainable Development and the post-2015 development agenda;
-* Adoption and implementation of standards by the global geospatial information community;
-* Development of a knowledge base for geospatial information;
-* Identification of trends in national institutional arrangements in geospatial information management;
-* Integrating geospatial statistics and other information;
-* Legal and policy frameworks, including critical issues related to authoritative data;
-* Development of a shared statement of principles on the management of geospatial Information; and
-* Determining fundamental data sets.
-
-=== G8 Open Data Charter
-In June 2013, the G8 Group of major economic nations signed the Open Data Charter. Access to data allows individuals and organizations to develop new insights and innovations that can improve the lives of others and help to improve the flow of information within and between countries. 
-
-Providing access to government data can empower individuals, the media, civil society, and business to fuel better outcomes in public services such as health, education, public safety, environmental protection, and governance.
-
-A set of core principles serves as the foundation for access to, and the release and re-use of data made available by G8 governments:
-
-* **Open Data by Default**
-* **Quality and Quantity**
-* **Useable by All**
-* **Releasing Data for Improved Governance**
-* **Releasing Data for Innovation**
-
-=== Smart Oceans
-Smart monitoring and observations by utilizing existing activities in the ocean to collect and manage data can close the knowledge gap we have about the ocean and the opportunities the ocean provides. 
-
-Whereas monitoring technology has Windows-hitherto been constrained by the limits to duration of research vessel expeditions (e.g., battery life) and weather conditions resulting in observing short-term events, smart ocean systems represent a major shift in how science and ocean monitoring are conducted. They address the limitation of conventional technologies to allow continuous year-round, sub-second observations with dozens of measurement types, accessible through the internet, in very-near real-time to any audience. 
-
-New data products and services are now being designed, tested, and operated that can be monitored and managed by researchers, industry, and users anywhere in the world.
+See link:LICENSE.adoc[LICENSE].
