@@ -1,0 +1,3 @@
+cd metanorma-test 
+docker run --rm --platform linux/amd64 -v "$(pwd)":/metanorma -w /metanorma metanorma/mn metanorma compile -t iso -x html,pdf sample-test-01.adoc --no-install-fonts
+
