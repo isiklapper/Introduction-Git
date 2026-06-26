@@ -1,0 +1,16 @@
+# collection.yml
+collection:
+  identifier: iho-s99-collection
+  title:
+    en: IHO S-99 Technical Specifications Portal
+  description: |
+    This portal contains the operational procedures and specifications for the IHO Geospatial Information Registry.
+  directives:
+    - documents-inline
+  manifest:
+    level: collection
+    title: IHO S-99 Specifications
+    docref:
+      - identifier: IHO S-99
+        fileref: documents/S-99/document.adoc
+        

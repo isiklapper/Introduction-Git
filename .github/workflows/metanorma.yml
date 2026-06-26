@@ -1,0 +1,33 @@
+name: Generate IHO S-99 Portal
+
+on:
+  push:
+    branches: [ main, master ] # main 또는 master 브랜치에 push되면 실행
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: metanorma/mn # 메타노마 공식 도커 환경 사용
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # 1. 개별 문서 compile 대신, collection(포탈) 빌드 명령어를 사용합니다.
+    - name: Compile Metanorma Collection Portal
+      run: |
+        metanorma collection collection.yml -x html -w site-portal
+
+    # 2. 결과물이 생성된 'site-portal' 폴더의 내용을 public 폴더로 복사합니다.
+    - name: Prepare deployment folder
+      run: |
+        mkdir public
+        cp -r site-portal/* public/
+
+    # 3. public 폴더에 모인 웹사이트 파일들을 GitHub Pages로 내보냅니다.
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
+        
