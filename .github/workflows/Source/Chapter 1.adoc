@@ -1,0 +1,41 @@
+// sections/02-structure.adoc
+
+== Structure of the Registry and Registers
+
+=== Registry Architecture
+The S-100 Geospatial Information (GI) Registry is hosted on an infrastructure managed by the IHO Secretariat. It functions as a centralized information system containing a collection of independent but interconnected Registers.
+
+=== Types of Registers
+The Registry comprises distinct types of Registers to support the development and implementation of S-100 based products:
+
+==== Feature Concept Register
+Contains definitions and descriptions of the feature types, feature attributes, and enumerated values used to build Feature Catalogues for data products.
+
+==== Portrayal Register
+Contains a collection of defined portrayals, symbols, and viewing rules mapped to the Feature Catalogues to support human-readable presentations of data.
+
+==== Metadata Register
+Maintains definitions and schemas for discovery metadata and quality indicators associated with geographic datasets.
+
+==== Product Specifications Register
+A list of S-100 based Product Specifications created by recognized organizations describing meta-information about the content, purpose, version, and availability of those specifications.
+
+==== Data Producer Code Register
+Contains unique identification codes assigned to organizations authorized to produce hydrographic data products and official Electronic Navigational Charts (ENCs).
+
+=== Domains and Control Bodies
+Within specific registers (such as Feature Concept, Portrayal, and Metadata), entries are classified into recognized **Domains** (e.g., Nautical Charts, Nautical Publications, Inland ENC).
+
+* **Domain Control Body (DCB):** Each domain is overseen by a DCB consisting of technical experts nominated by Member States and international organizations. The DCB is responsible for evaluating proposals submitted to their respective domain.
+* **Executive Control Body (ECB):** Consists of representatives from each domain to monitor registry operations, advise the Register Manager, and arbitrate in the event of disputes or technical appeals.
+
+=== Stakeholder Roles and Responsibilities
+
+==== Register Owner
+The International Hydrographic Organization (IHO) serves as the Register Owner, establishing the registry and defining its overarching governance and policies.
+
+==== Register Manager
+The organization delegated by the Owner to maintain the Registry platform. The IHO Secretariat (TSSO) acts as the Register Manager, executing approved changes and managing the system's technical infrastructure.
+
+==== Submitting Organizations
+Organizations authorized by the Register Owner to submit proposals for new items, modifications, or retirement of existing items in the registers.
