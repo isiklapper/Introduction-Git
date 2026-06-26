@@ -2,15 +2,21 @@
 collection:
   identifier: iho-s99-collection
   title:
-    en: IHO S-99 Technical Specifications Portal
+    en: IHO Geospatial Information Registry Portal
   description: |
-    This portal contains the operational procedures and specifications for the IHO Geospatial Information Registry.
+    Operational Procedures for the Organization and Management of the IHO GI Registry.
   directives:
     - documents-inline
+  
+  # ★ 이 부분을 추가하여 방금 만든 디자인 템플릿을 메인화면으로 지정합니다.
+  hooks:
+    html:
+      prefatory-content: liquid_homepage.html
+
   manifest:
     level: collection
     title: IHO S-99 Specifications
     docref:
-      - identifier: IHO S-99
+      - identifier: S-99
+        title: Operational Procedures for the IHO GI Registry
         fileref: documents/S-99/document.adoc
-        
