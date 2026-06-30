@@ -14,18 +14,31 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # collection.yml 대신 우리가 만든 s99-document.adoc를 직접 컴파일하도록 강제합니다.
+      # 1. 메타노마 컴파일 실행
       - name: Compile Metanorma Document
         run: |
-          docker run --rm -v ${{ github.workspace }}:/metanorma -w /metanorma metanorma/metanorma metanorma compile --agree-to-terms s99-document.adoc
+          docker run --rm -v ${{ github.workspace }}:/metanorma -w /metanorma metanorma/metanorma metanorma compile --agree-to-terms Introduction-Git/s99-document.adoc
 
-      # 빌드 완료 후 생성된 HTML 파일을 public 폴더로 이동
+      # 2. 어디에 생성되었든 .html 파일을 자동으로 찾아내서 public/index.html로 복사합니다.
       - name: Prepare Deployment Artifacts
         run: |
           mkdir -p public
-          cp INTRODUCTION-GIT/s99-document.adoc public/index.html || true
+          touch public/.nojekyll
+          
+          echo "=== 프로젝트 전체에서 HTML 파일 검색 중 ==="
+          # public 폴더를 제외하고 가장 먼저 발견되는 .html 파일의 경로를 획득합니다.
+          HTML_PATH=$(find . -name "*.html" -not -path "./public/*" | head -n 1)
+          
+          if [ -n "$HTML_PATH" ]; then
+            echo "🎯 발견된 HTML 파일: $HTML_PATH"
+            cp "$HTML_PATH" public/index.html
+            echo "✅ index.html로 변환 및 복사 성공!"
+          else
+            echo "❌ 에러: 컴파일된 HTML 파일을 찾을 수 없습니다."
+            exit 1
+          fi
 
-      # public 폴더의 내용을 gh-pages 브랜치로 배포
+      # 3. 배포 진행
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
