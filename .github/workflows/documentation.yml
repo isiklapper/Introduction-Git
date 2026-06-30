@@ -14,23 +14,18 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # [진단 단계] 로봇의 눈에 내 파일들이 진짜 어떤 이름과 구조로 보이는지 로그에 찍어줍니다.
-      - name: Check Directory and File Names
-        run: |
-          echo "=== 현재 폴더 위치의 파일 목록 ==="
-          ls -la
-          echo "=== 전체 폴더 구조 들여다보기 ==="
-          find . -maxdepth 3 -not -path '*/.*'
-
+      # collection.yml 대신 우리가 만든 s99-document.adoc를 직접 컴파일하도록 강제합니다.
       - name: Compile Metanorma Document
         run: |
-          docker run --rm -v ${{ github.workspace }}:/metanorma -w /metanorma metanorma/metanorma compile --agree-to-terms s99-document.adoc
+          docker run --rm -v ${{ github.workspace }}:/metanorma -w /metanorma metanorma/metanorma metanorma compile --agree-to-terms s99-document.adoc
 
+      # 빌드 완료 후 생성된 HTML 파일을 public 폴더로 이동
       - name: Prepare Deployment Artifacts
         run: |
-          mkdir public
+          mkdir -p public
           cp s99-document.html public/index.html || true
 
+      # public 폴더의 내용을 gh-pages 브랜치로 배포
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
