@@ -1,41 +1,19 @@
-= Operational Procedures for the Organization and Management of the IHO Geospatial Information Registry
+= Operational Procedures for the Organization and Management of the S-100 Registry
 :docnumber: 99
-:edition: 2.0.0
-:docdate: 2022-10
+:edition: 1.0.0
+:status: published
+:committee: hssc
+:workgroup: s100wg
 :doctype: standard
-:status: in-force
-:language: en
-:submitting-organization: International Hydrographic Organization (IHO)
-:published-date: 2022-10
-:copyright-year: 2022
 :mn-document-class: iho
-:mn-output-extensions: html,pdf,xml,doc
-:toc:
-:imagesdir: images
+:mn-output-extensions: html
 
-== Overview
+== 1. Scope
+This document describes the operational procedures for the S-100 Registry.
 
-=== Introduction
-Standardisation of hydrographic methods and the provision of information is a fundamental part of achieving the International Hydrographic Organization (IHO) objectives. 
+== 2. Roles and Responsibilities
+The Roles defined in IHO S-99 include:
 
-The S-100 Universal Hydrographic Data Model is underpinned by a Geospatial Information (GI) Registry and component Registers based on the International Standard ISO 19135-1 Geographic information — Procedures for item registration — Part 1: Fundamentals. 
-
-The IHO owns and manages this Registry. This document describes the roles, responsibilities, and operational procedures for managing the S-100 Geospatial Information Registry and its component Registers.
-
-=== Purpose
-The purpose of this document is to specify the procedures to be followed by the IHO Secretariat, Member States, and participating organizations for maintaining, expanding, and managing the data items within the IHO GI Registry. 
-
-It defines the framework for ensuring consistency, quality control, and appropriate governance across all registers, guaranteeing that the registry remains a reliable authority for hydrographic and maritime communities.
-
-=== Scope
-This publication applies to the management of all content within the IHO GI Registry, including but not limited to:
-* Feature Concepts
-* Portrayal Information
-* Metadata
-* Product Specifications
-* Data Producer Codes
-
-It covers the lifecycle of registry items from submission, review, approval, to eventual retirement or clarification.
-
-
-include::sections/02-structure.adoc[]
+* Registry Manager
+* Control Body
+* Submitting Organization
