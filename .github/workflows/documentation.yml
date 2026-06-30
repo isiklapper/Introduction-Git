@@ -1,0 +1,31 @@
+name: Metanorma Auto Publish
+
+on:
+  push:
+    branches: [ main, master ] # main 브랜치에 코드가 올라올 때마다 실행
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Compile Metanorma Document
+        uses: metanorma/metanorma-action@v2
+        with:
+          agree-to-terms: true
+
+      - name: Prepare Deployment Artifacts
+        run: |
+          mkdir public
+          cp *.html public/ || true
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
