@@ -2,7 +2,7 @@ name: Metanorma Auto Publish
 
 on:
   push:
-    branches: [ main, master ] # main 또는 master 브랜치에 푸시될 때 실행
+    branches: [ main, master ]
 
 permissions:
   contents: write
@@ -14,18 +14,23 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # 메타노마 공식 도커 이미지를 사용하여 안전하고 빠르게 컴파일합니다.
+      # [진단 단계] 로봇의 눈에 내 파일들이 진짜 어떤 이름과 구조로 보이는지 로그에 찍어줍니다.
+      - name: Check Directory and File Names
+        run: |
+          echo "=== 현재 폴더 위치의 파일 목록 ==="
+          ls -la
+          echo "=== 전체 폴더 구조 들여다보기 ==="
+          find . -maxdepth 3 -not -path '*/.*'
+
       - name: Compile Metanorma Document
         run: |
-          docker run --rm -v ${{ github.workspace }}:/metanorma -w /metanorma metanorma/metanorma metanorma compile --agree-to-terms s99-document.adoc
+          docker run --rm -v ${{ github.workspace }}:/metanorma -w /metanorma metanorma/metanorma compile --agree-to-terms s99-document.adoc
 
-      # 빌드된 결과물을 웹사이트 메인(index.html)으로 서빙하기 위해 이름을 변경하여 복사합니다.
       - name: Prepare Deployment Artifacts
         run: |
           mkdir public
           cp s99-document.html public/index.html || true
 
-      # public 폴더의 내용을 gh-pages 브랜치로 안전하게 보냅니다.
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
