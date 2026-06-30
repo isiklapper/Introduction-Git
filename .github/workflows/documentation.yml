@@ -23,7 +23,7 @@ jobs:
       - name: Prepare Deployment Artifacts
         run: |
           mkdir -p public
-          cp INTRODUCTION-GIT/s99-document.html public/index.html || true
+          cp INTRODUCTION-GIT/s99-document.adoc public/index.html || true
 
       # public 폴더의 내용을 gh-pages 브랜치로 배포
       - name: Deploy to GitHub Pages
